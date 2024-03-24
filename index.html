@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
-       <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')">Londyn</button>
-      <button class="tablinks" onclick="openCity(event, 'Paris')">Paryż</button>
-      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokio</button>
-    </div>
+    <header>        
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">Londyn</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paryż</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokio</button>
+      </div>
+    </header>
 
+  <main>
     <div id="London" class="tabcontent">
       <h3>Londyn</h3>
       <p>Londyn to stolica Anglii i Zjednoczonego Królestwa.</p>
@@ -26,6 +30,28 @@
       <h3>Tokio</h3>
       <p>Tokio to stolica Japonii.</p>
     </div>
+    
+  </main>
+
+    <footer>
+      <script>
+          function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+        
+      </script>
+    </footer>
   </body>
 </html>
 l
