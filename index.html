@@ -2,56 +2,111 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>City Guide</title>
   </head>
   <body>
-    <header>        
+    <header>
       <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">Londyn</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Paryż</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokio</button>
+        <button class="tablinks" onclick="openCity(event, 'London')">
+          London
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">
+          Paris
+        </button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+          Tokyo
+        </button>
       </div>
     </header>
-
-  <main>
-    <div id="London" class="tabcontent">
-      <h3>Londyn</h3>
-      <p>Londyn to stolica Anglii i Zjednoczonego Królestwa.</p>
-    </div>
-
-    <div id="Paris" class="tabcontent">
-      <h3>Paryż</h3>
-      <p>Paryż to stolica Francji.</p>
-    </div>
-
-    <div id="Tokyo" class="tabcontent">
-      <h3>Tokio</h3>
-      <p>Tokio to stolica Japonii.</p>
-    </div>
-    
-  </main>
-
+    <main>
+      <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>
+          London is the capital city of England and the United Kingdom, renowned
+          for its history, architecture, and cultural diversity.
+        </p>
+        <img
+          src="./src/londyn.jpeg"
+          height="480"
+          width="600"
+          alt="View of London"
+        />
+        <h4>Top Attractions:</h4>
+        <ul>
+          <li>The British Museum</li>
+          <li>The Tower of London</li>
+          <li>Shakespeare's Globe Theatre</li>
+        </ul>
+        <a href="https://www.visitlondon.com" target="_blank"
+          >Visit London Official Site</a
+        >
+      </div>
+      <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>
+          Paris, France's capital, is a major European city and a global center
+          for art, fashion, gastronomy, and culture.
+        </p>
+        <img
+          src="./src/Paryz.jpg"
+          height="480"
+          width="600"
+          alt="View of Paris"
+        />
+        <h4>Must-See Locations:</h4>
+        <ul>
+          <li>The Louvre</li>
+          <li>Notre Dame Cathedral</li>
+          <li>The Eiffel Tower</li>
+        </ul>
+        <a href="https://en.parisinfo.com" target="_blank"
+          >Paris Tourist Office</a
+        >
+      </div>
+      <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>
+          Tokyo is Japan's bustling capital, blending the ultramodern with the
+          traditional, from neon-lit skyscrapers to historic temples.
+        </p>
+        <img
+          src="./src/tokyo.jpg"
+          height="480"
+          width="600"
+          alt="View of Tokyo"
+        />
+        <h4>Popular Spots:</h4>
+        <ul>
+          <li>Shinjuku Gyoen National Garden</li>
+          <li>Meiji Shrine</li>
+          <li>Tokyo Tower</li>
+        </ul>
+        <a href="https://www.gotokyo.org/en/" target="_blank"
+          >Go Tokyo Official Guide</a
+        >
+      </div>
+    </main>
     <footer>
       <script>
-          function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-        
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(
+              " active",
+              ""
+            );
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
       </script>
     </footer>
   </body>
 </html>
-
